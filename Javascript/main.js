@@ -1,17 +1,32 @@
-function clienteLlega(cliente, callback) {
-  console.log(`Llego el cliente ${cliente.nombre} y pidió: ${cliente.pedido}`);
-  callback(cliente);
-}
+const pedidos = [];
 
-// Definimos el callback que recibe el pedido
-function recibirPedido(cliente) {
-  console.log(`Pedido recibido de ${cliente.nombre}: ${cliente.pedido}`);
-}
+const form = document.getElementById("formPedido");
+const pedidosUl = document.getElementById("pedidosUl");
 
-// Objeto de prueba
-const clientePrueba = {
-  nombre: "Juan",
-  pedido: "Pizza",
-};
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-clienteLlega(clientePrueba, recibirPedido);
+  const nombre = document.getElementById("nombre").value;
+  const pedido = document.getElementById("pedido").value;
+
+  if (!nombre || !pedido) {
+    alert("Por favor completa todos los campos");
+    return;
+  }
+
+  /* Crear nuevo pedido */
+  const nuevoPedido = { nombre, pedido };
+
+  /* Guardar el array */
+  pedidos.push(nuevoPedido);
+
+  /* Mostrar la lista */
+  const li = document.createElement("li");
+  li.textContent = `${nombre} pidió: ${pedido}`;
+  pedidosUl.appendChild(li);
+
+  /* Reestablecer valores */
+  form.reset();
+
+  console.log("Pedidos actuales:", pedidos);
+});
