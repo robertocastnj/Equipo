@@ -1,0 +1,91 @@
+/* -------------------------------------------------------------------- */
+/* /*****************************************************
+ 📝 Ejercicio Grupal: Simulador de Procesos de un Restaurante
+ ⏰ Duración estimada: 1 hora y 30 minutos
+ 👥 Trabajo en grupos de 3 a 5 personas
+******************************************************/
+
+/*
+🎯 OBJETIVO:
+Implementar un sistema que simule el flujo de atención en un restaurante
+utilizando callbacks, promesas y async/await.
+*/
+
+/*
+📌 INSTRUCCIONES:
+
+1. Callback (Pedido del cliente):
+   - Crear una función que simule que un cliente llega y hace un pedido.
+   - El pedido debe recibirse mediante una función con callback.
+   - El callback debe mostrar en consola el pedido realizado por el cliente.
+
+   Ejemplo esperado en consola:
+   Cliente llegó y pidió: Pizza
+   Pedido recibido: Pizza
+*/
+
+/*
+2. Promesas (Cocina):
+   - Una vez recibido el pedido, pasa a cocina.
+   - La cocina debe simular el tiempo de preparación de cada comida
+     usando setTimeout y promesas.
+   - Los tiempos de cocción son:
+       Pizza: 3 segundos
+       Hamburguesa: 2 segundos
+       Ensalada: 1 segundo
+
+   Ejemplo esperado en consola:
+   Cocinando Pizza...
+   Pizza lista en 3 segundos
+*/
+
+/*
+3. Async/Await (Servicio y Pago):
+   - Después de que la promesa de la cocina se resuelva, el pedido debe ser
+     servido al cliente.
+   - Simular que el cliente come durante 2 segundos y luego paga la cuenta.
+   - Esto debe hacerse usando async/await.
+
+   Ejemplo esperado en consola:
+   Sirviendo Pizza al cliente...
+   Cliente está comiendo...
+   Cuenta pagada ✅
+*/
+
+/*
+4. Desafío Extra (Opcional):
+   - Manejar varios clientes que hagan pedidos en paralelo usando Promise.all.
+   - Mostrar en consola cuál pedido estuvo listo primero.
+*/
+
+/*
+🔧 ESPECIFICACIONES TÉCNICAS:
+- Usar JavaScript en un archivo main.js.
+- Pueden usar la consola del navegador o Node.js para probar el código.
+- El flujo debe contener las tres etapas:
+     ✅ Pedido con callback.
+     ✅ Cocina con promesas.
+     ✅ Servicio y pago con async/await.
+- El código debe estar modularizado en funciones para cada proceso.
+*/
+
+/*
+ RESULTADO ESPERADO (ejemplo de flujo completo):
+Cliente llegó y pidió: Pizza
+Pedido recibido: Pizza
+Cocinando Pizza...
+Pizza lista en 3 segundos
+Sirviendo Pizza al cliente...
+Cliente está comiendo...
+Cuenta pagada 
+manipulando el DOM 
+*/
+
+/*
+ ENTREGA FINAL DEL GRUPO:
+Un archivo o varios  .js con el código del simulador, organizado en funciones
+y con comentarios explicativos de dónde aplicaron:
+   - Callback
+   - Promesas
+   - Async/Await
+*/
